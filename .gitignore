@@ -1,0 +1,81 @@
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python bytecode and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE and editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.agents/
+.gemini/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Testing, coverage and evals output
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+nosetests.xml
+coverage.xml
+*.cover
+evals/results/
+evals/outputs/
+*.jsonl
+
+# Local model weights and embeddings cache
+.fastembed/
+models_cache/
+qdrant_storage/
+
+# Logs, databases and local telemetry
+*.log
+logs/
+*.sqlite
+*.sqlite3
+*.duckdb
+*.db
+.langfuse/
+
+# Temporary and scratch files
+tmp/
+temp/
+*.bak
+scratch/
+
+# Distribution and packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg

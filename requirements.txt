@@ -1,5 +1,10 @@
 # CapitalUP AI Chatbot Production Requirements
 
+# Core Environment & Database (PostgreSQL)
+python-dotenv>=1.0.1
+asyncpg>=0.29.0
+SQLAlchemy[asyncio]>=2.0.32
+
 # Web Framework, Async Networking & API Gateway
 fastapi>=0.115.0
 uvicorn[standard]>=0.30.0
@@ -14,38 +19,29 @@ python-multipart>=0.0.9
 redis[hiredis]>=5.0.8
 redisvl>=0.3.3
 
-# Decision Engine & Fast Rule Evaluation (Deterministic Rules + OpenAI)
+# Decision Engine (Fast Structured Intent Classification via OpenAI)
 instructor>=1.4.0
-json-logic-qure>=0.1.0
-rule-engine>=4.5.1
 pyrate-limiter>=3.6.0
 
-# Service / Tool Layer & Database Connectors
-asyncpg>=0.29.0
-SQLAlchemy[asyncio]>=2.0.32
+# Service / Tool Analytics
 duckdb>=1.0.0
 polars>=1.6.0
 
 # RAG Pipeline & Vector Search
+fastembed>=0.3.0
 qdrant-client>=1.10.1
 rank-bm25>=0.2.2
-sentence-transformers>=3.0.1
-cohere>=5.9.0
 tiktoken>=0.7.0
 pypdf>=4.3.1
 
 # LLM Gateway, Orchestration & Providers
 litellm>=1.44.0
-langgraph>=0.2.14
 langchain-core>=0.2.35
 openai>=1.43.0
-google-genai>=0.1.1
 
 # Output Safety, Guardrails & Security
 presidio-analyzer>=2.2.355
 presidio-anonymizer>=2.2.355
-spacy>=3.7.5
-nemoguardrails>=0.9.1
 
 # Reliability, Observability & Tracing
 langfuse>=2.44.0
@@ -54,4 +50,3 @@ opentelemetry-api>=1.26.0
 opentelemetry-sdk>=1.26.0
 opentelemetry-instrumentation-fastapi>=0.47b0
 loguru>=0.7.2
-python-dotenv>=1.0.1
