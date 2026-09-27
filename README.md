@@ -71,47 +71,6 @@ pip install -r requirements.txt
 
 ### 3. Configure Environment Variables
 Copy `.env.example` to `.env` and fill in your cloud service credentials:
-```env
-# Application
-APP_NAME=CapitalUP-AI-Chatbot
-APP_ENV=production
-HOST=0.0.0.0
-PORT=8000
-
-# Online Redis (Redis Cloud / Upstash)
-REDIS_URL=redis://default:password@your-redis-host:port
-REDIS_SEMANTIC_CACHE_THRESHOLD=0.92
-REDIS_CACHE_TTL_SECONDS=3600
-
-# Online Vector Database (Qdrant Cloud)
-QDRANT_URL=https://your-cluster-id.cloud.qdrant.io
-QDRANT_API_KEY=your_qdrant_api_key
-QDRANT_COLLECTION_NAME=capitalup_knowledge_base
-
-# Embedding Models (100% Open Source, Zero API Cost via FastEmbed)
-EMBEDDING_PROVIDER=fastembed
-EMBEDDING_MODEL=BAAI/bge-small-en-v1.5
-EMBEDDING_DIMENSIONS=384
-
-# Online PostgreSQL (Supabase / Neon)
-DATABASE_URL=postgresql+asyncpg://postgres:password@db.project.supabase.co:5432/postgres
-
-# Fast Decision Engine (Jev by TypeSafe AI / OpenAI fallback)
-DECISION_ENGINE=jev
-JEV_MODEL=jev-latest
-TYPESAFE_API_KEY=your_typesafe_api_key
-DECISION_MODEL=gpt-4o-mini
-
-# LLM Providers (Managed via LiteLLM)
-OPENAI_API_KEY=your_openai_api_key
-DEFAULT_SMALL_MODEL=gpt-4o-mini
-DEFAULT_BIG_MODEL=gpt-4o
-
-# Online Observability (Langfuse Cloud)
-LANGFUSE_PUBLIC_KEY=your_langfuse_public_key
-LANGFUSE_SECRET_KEY=your_langfuse_secret_key
-LANGFUSE_HOST=https://us.cloud.langfuse.com
-```
 
 ### 4. Initialize Database & Seed Market Assets
 Creates all schema tables in PostgreSQL and seeds 25 market stocks and indices:
